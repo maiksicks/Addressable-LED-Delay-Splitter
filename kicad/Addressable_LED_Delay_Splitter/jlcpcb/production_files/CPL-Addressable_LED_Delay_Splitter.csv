@@ -1,0 +1,6 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,330n,C_0805_2012Metric,97.5,-57.75,90.0,top
+C2,100n,C_0805_2012Metric,107.5,-57.75,90.0,top
+R1,120,R_0805_2012Metric,102.5,-56.75,0.0,bottom
+U2,L78L05_SO8,SOIC-8_3.9x4.9mm_P1.27mm,102.5,-57.75,180.0,top
+U3,ATtiny406-S,SOIC-20W_7.5x12.8mm_P1.27mm,102.5,-67.5,0.0,top
