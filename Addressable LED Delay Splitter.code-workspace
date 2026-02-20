@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Addressable LED Delay Splitter",
+			"path": "."
+		},
+		{
+			"name": "Firmware",
+			"path": "firmware"
+		}
+	],
+	"settings": {}
+}
