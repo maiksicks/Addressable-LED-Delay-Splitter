@@ -1,0 +1,7 @@
+Copyright (c) 2026 Maik Sicks
+
+The firmware source code is licensed under the GNU General Public License v3.0 (GPL-3.0).
+See ./firmware/LICENSE for details.
+
+The hardware design files (schematics, PCB layouts, and related design sources) and any generated manufacturing outputs are licensed under the CERN Open Hardware License Version 2 - Weakly Reciprocal
+See ./kicad/LICENSE for details.
