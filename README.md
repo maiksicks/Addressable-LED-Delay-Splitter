@@ -1,10 +1,11 @@
 # Addressable LED Delay Splitter (WS2812B / SK6812)
 
 This project implements a "delay splitter" for addressable LED strips (WS2812B / SK6812) using an [ATtiny406](https://www.microchip.com/en-us/product/attiny406) microcontroller.
+The device should work for all 800 kHz LED strips that only use one data line.
 
-<img src="./assets/preview.png" alt="Preview of the delay splitter" width="600" />
+> Inspired by [WS2812B Delay Splitter](https://hackaday.io/project/8181-ws2812b-delay-splitter) that uses a [CMIC](https://en.wikipedia.org/wiki/Configurable_mixed-signal_IC) for this task.
 
-------
+<img src="./assets/preview.png" alt="Preview of the delay splitter" width="800" />
 
 ## Description
 
