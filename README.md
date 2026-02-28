@@ -7,6 +7,9 @@ The device should work for all 800 kHz LED strips that only use one data line.
 
 <img src="./assets/render/preview.png" alt="Preview of the delay splitter" width="800" />
 
+> [!NOTE]
+> More images are available in the [Gallery](./docs/Gallery.md). Including a short demo video showing the device in action.
+
 ## Description
 
 The splitter takes a single LED data stream as input and provides two outputs:
