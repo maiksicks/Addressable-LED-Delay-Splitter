@@ -2,7 +2,7 @@
 
 ## Demo video
 
-![Demo video](../assets/media/demo.mp4)
+https://github.com/user-attachments/assets/cb7658ee-294e-4ca6-bfc9-5e69e2aed46c
 
 In this example video, the device is configured to send the first 10 pixels to the primary output and the remaining pixels to the secondary output.
 Additionally, the RGBW jumper is set.
