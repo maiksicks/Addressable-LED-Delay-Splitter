@@ -115,7 +115,7 @@ void init() {
   uint16_t pixel_delay = 0;
   uint8_t bits_per_pixel = 0;
 
-  #ifdef READ_STARTUP_CONFIG
+  #ifdef READ_CONFIG_FROM_JUMPERS
 
     // Configure pins as inputs with pull-ups enabled
     PORTA.DIRCLR = PIN2_bm | PIN5_bm | PIN6_bm;
