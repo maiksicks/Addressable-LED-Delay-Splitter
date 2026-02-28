@@ -105,8 +105,8 @@ void disableUnusedPeripherals() {
  *   PA2: RGBW enable (1 = 32 bits/pixel, 0 = 24 bits/pixel)
  *
  * Pins are read with pull-ups enabled:
- *   - Grounded pin = 0
- *   - Floating pin = 1 (pulled high)
+ *   - Grounded pin = 1 (jumper installed)
+ *   - Floating pin = 0 (no jumper)
  *
  * Pull-ups are disabled after reading.
  */
@@ -135,7 +135,7 @@ void init() {
     _delay_us(100);
 
     // Read RGBW mode from PA2
-    bool rgbw_mode = (PORTA.IN & PIN2_bm) ? true : false;
+    bool rgbw_mode = !(PORTA.IN & PIN2_bm);
 
     if (rgbw_mode) {
       bits_per_pixel = BITS_PER_PIXEL_RGBW;
@@ -144,15 +144,15 @@ void init() {
     }
 
     // Read pin states and build the delay pixel value
-    // With pull-ups: grounded = 0, floating = 1
-    if (PORTA.IN & PIN5_bm) pixel_delay |= (1 << 0);  // Bit 0
-    if (PORTB.IN & PIN5_bm) pixel_delay |= (1 << 1);  // Bit 1
-    if (PORTB.IN & PIN3_bm) pixel_delay |= (1 << 2);  // Bit 2
-    if (PORTB.IN & PIN1_bm) pixel_delay |= (1 << 3);  // Bit 3
-    if (PORTA.IN & PIN6_bm) pixel_delay |= (1 << 4);  // Bit 4
-    if (PORTB.IN & PIN4_bm) pixel_delay |= (1 << 5);  // Bit 5
-    if (PORTB.IN & PIN2_bm) pixel_delay |= (1 << 6);  // Bit 6
-    if (PORTB.IN & PIN0_bm) pixel_delay |= (1 << 7);  // Bit 7
+    // With pull-ups: grounded = 1, floating = 0
+    if (!(PORTA.IN & PIN5_bm)) pixel_delay |= (1 << 0);  // Bit 0
+    if (!(PORTB.IN & PIN5_bm)) pixel_delay |= (1 << 1);  // Bit 1
+    if (!(PORTB.IN & PIN3_bm)) pixel_delay |= (1 << 2);  // Bit 2
+    if (!(PORTB.IN & PIN1_bm)) pixel_delay |= (1 << 3);  // Bit 3
+    if (!(PORTA.IN & PIN6_bm)) pixel_delay |= (1 << 4);  // Bit 4
+    if (!(PORTB.IN & PIN4_bm)) pixel_delay |= (1 << 5);  // Bit 5
+    if (!(PORTB.IN & PIN2_bm)) pixel_delay |= (1 << 6);  // Bit 6
+    if (!(PORTB.IN & PIN0_bm)) pixel_delay |= (1 << 7);  // Bit 7
 
     #ifndef FORCE_SHORTED_CONTROL_PIN
       // Check if PB0 is shorted to ground
