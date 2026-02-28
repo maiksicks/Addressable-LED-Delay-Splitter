@@ -7,6 +7,9 @@ https://github.com/user-attachments/assets/cb7658ee-294e-4ca6-bfc9-5e69e2aed46c
 In this example video, the device is configured to send the first 10 pixels to the primary output and the remaining pixels to the secondary output.
 Additionally, the RGBW jumper is set.
 
+The device visible in the bottom left corner is my ESP32-S3 based ARGB controller. It has two ARGB outputs, 4 IOs, Power measurment, Ethernet and some other features. It is not related to the delay splitter, but I thought it would be nice to show it as well. The controller is designed to be used as low-latency UDP to ARGB bridge and it runs ESPHome firmware with custom components. It can be also flashed with WLED firmware, but the support for the W5500 ethernet module is tricky.
+(Separate project, will be published soon ...)
+
 Direct links: [Video](../assets/media/demo.mp4), [Image](../assets/media/demo_setup.jpeg)
 
 ## Images
