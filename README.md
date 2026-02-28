@@ -90,6 +90,12 @@ Special parameters:
 - `FORCE_SHORTED_CONTROL_PIN` - Forces the _shorted configuration pin mode_ to be enabled. This mode will be automatically enabled if jumper "128" is used. The control signal will then be inverted internally instead of setting the pin HIGH and LOW. 
   _Background: This mode had to be introduced because the hardware design of the splitter (revision 1) already had all Port B pins used for the configuration jumpers. The Event System only supports Port B pins as event generators on `ASYNCCH1`._
 
+### Operation voltage
+
+The device contains an onboard voltage regulator that can accept input voltages up to 30V (absolute maximum rating). Therefore, the recommend input voltages are 12V and 24V.
+
+It is also possible to power the device with 5V. However, in this case, the voltage regulator will not be able to provide a stable 5V output for the ATtiny406. It may be a good idea to remove the voltage regulator and connect the 5V pin directly to the VCC pin.
+
 ### Flashing
 
 The project can be built and flashed using [PlatformIO](https://platformio.org/).
