@@ -106,7 +106,7 @@ After this, you can connect pin 6 of the Arduino to the UPDI pin of the ATtiny40
 
 ## Limitations
 
-There is a maximum amount of leds that can be connected to a single data line.
+There is a maximum amount of leds that can be connected to a single data line. This limit is determined by the data rate of the LEDs. The formula to calculate the maximum number of LEDs is:
 
 `N = ( (1 / f) - T_reset ) / ( B / R )`
 
@@ -119,11 +119,11 @@ Where:
 
 
 Example:
-- With 60 Hz and RGB LEDs: 553 LEDs
-- With 60 Hz and RGBW LEDs: 415 LEDs
+- With 60 Hz and RGB LEDs: up to 553 LEDs
+- With 60 Hz and RGBW LEDs: up to 415 LEDs
 
-- With 30 Hz and RGB LEDs: 1109 LEDs
-- With 30 Hz and RGBW LEDs: 832 LEDs
+- With 30 Hz and RGB LEDs: up to 1109 LEDs
+- With 30 Hz and RGBW LEDs: up to 832 LEDs
 
 ## Ordering PCBs
 
